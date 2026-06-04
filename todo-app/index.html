@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待办事项</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" aria-labelledby="app-title">
+      <section class="todo-card">
+        <header class="app-header">
+          <p class="eyebrow">Today</p>
+          <h1 id="app-title">待办事项</h1>
+        </header>
+
+        <form class="todo-form" id="todo-form">
+          <label class="sr-only" for="todo-input">输入任务内容</label>
+          <input
+            id="todo-input"
+            type="text"
+            maxlength="80"
+            autocomplete="off"
+            placeholder="添加一个新任务..."
+          />
+          <button type="submit">添加</button>
+        </form>
+
+        <div class="stats" aria-live="polite">
+          <span><strong id="active-count">0</strong> 未完成</span>
+          <span><strong id="completed-count">0</strong> 已完成</span>
+        </div>
+
+        <ul class="todo-list" id="todo-list" aria-label="任务列表"></ul>
+
+        <p class="empty-state" id="empty-state">还没有任务，先写下一件要完成的小事吧。</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
